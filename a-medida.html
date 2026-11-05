@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A medida — Casa Sevilla (demo)</title>
+  <meta name="description" content="Diseña tu par a medida.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0807">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="demo-banner" role="note">Demo — no es la tienda oficial · Precios y datos de ejemplo</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Casa Sevilla, inicio"><strong>CASA SEVILLA</strong><small>Atelier Mexica</small></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+      <nav id="main-nav" class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="catalogo.html">Colección</a></li>
+          <li><a href="catalogo.html?tipo=botas">Botas</a></li>
+          <li><a href="catalogo.html?tipo=loafers">Loafers</a></li>
+          <li><a href="catalogo.html?tipo=mules">Mules</a></li>
+          <li><a href="catalogo.html?tipo=accesorios">Accesorios</a></li>
+          <li><a href="a-medida.html" aria-current="page">A medida</a></li>
+          <li><a href="envios-pagos.html">Envíos y pagos</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/5215611673448?text=Hola%20Casa%20Sevilla%2C%20quiero%20informaci%C3%B3n%20de%20sus%20modelos." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">A medida</p>
+        <h1>Diseña tu par</h1>
+        <p>Del pensamiento al objeto: cuéntanos tu idea o mándanos la foto de un modelo que te guste y lo hacemos a tu medida.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <ol class="steps">
+          <li><h3>Elige el modelo</h3><p>Chelsea, vaquera, loafer, mule… o una foto de referencia.</p></li>
+          <li><h3>Piel y color</h3><p>Exóticas, gamuza o becerro, en la paleta que quieras.</p></li>
+          <li><h3>Puntera y tacón</h3><p>Afinamos la silueta y la altura.</p></li>
+          <li><h3>Medidas</h3><p>Talla MX y, si hace falta, medidas del pie por videollamada.</p></li>
+          <li><h3>Confección y entrega</h3><p>Fabricación en el atelier y envío a tu domicilio.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section-alt" aria-labelledby="form-title">
+      <div class="wrap">
+        <h2 id="form-title">Tu pedido a medida</h2>
+        <p style="color:var(--muted)">Al enviar se abre WhatsApp con el resumen listo. La foto no se sube a ningún lado: la adjuntas tú en el chat.</p>
+        <form id="mto-form" class="form">
+          <div class="field"><label for="modelo">Modelo</label><select id="modelo" name="modelo" required><option value="">Elige…</option><option>Chelsea</option><option>Vaquera / western</option><option>Bota de arnés</option><option>Loafer horsebit</option><option>Penny loafer</option><option>Mule</option><option>Copia de modelo (foto)</option></select></div>
+          <div class="field"><label for="piel">Piel</label><select id="piel" name="piel" required><option value="">Elige…</option><option>Becerro pulido</option><option>Gamuza (suede)</option><option>Grabado cocodrilo</option><option>Pitón</option><option>Avestruz</option><option>Charol</option></select></div>
+          <div class="field"><label for="color">Color</label><select id="color" name="color" required><option value="">Elige…</option><option>Negro</option><option>Cognac</option><option>Tabaco / tan</option><option>Vino</option><option>Café chocolate</option><option>Crema</option><option>Otro (lo describo en notas)</option></select></div>
+          <div class="field"><label for="puntera">Puntera</label><select id="puntera" name="puntera" required><option value="">Elige…</option><option>Redonda</option><option>Almendrada</option><option>Cuadrada</option><option>Picuda (western)</option></select></div>
+          <div class="field"><label for="tacon">Tacón</label><select id="tacon" name="tacon" required><option value="">Elige…</option><option>Bajo (2.5 cm)</option><option>Medio (3.5 cm)</option><option>Cubano (4.5 cm)</option><option>Suela tractor</option></select></div>
+          <div class="field"><label for="talla">Talla MX</label><input id="talla" name="talla" type="text" inputmode="decimal" placeholder="Ej. 27" required></div>
+          <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="referencia">Foto de referencia (opcional)</label><input id="referencia" name="referencia" type="file" accept="image/*"><p class="hint">Solo se toma el nombre del archivo; la imagen la envías por WhatsApp.</p></div>
+          <div class="field full"><label for="notas">Notas</label><textarea id="notas" name="notas" rows="3" placeholder="Costuras, herrajes, color de suela…"></textarea></div>
+          <div class="full"><button class="btn btn-primary btn-block" type="submit">Enviar por WhatsApp</button></div>
+          <pre id="mto-preview" class="demo-data full" hidden aria-live="polite" style="white-space:pre-wrap"></pre>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><strong>CASA SEVILLA</strong><small>Atelier Mexica</small></a>
+          <p style="margin-top:1rem">Del pensamiento al objeto.<br>Consultoría en calzado masculino.</p>
+        </div>
+        <div>
+          <h2>Tienda</h2>
+          <ul>
+            <li><a href="catalogo.html">Colección</a></li>
+            <li><a href="catalogo.html?tipo=botas">Botas</a></li>
+            <li><a href="catalogo.html?tipo=loafers">Loafers</a></li>
+            <li><a href="a-medida.html">A medida</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ayuda</h2>
+          <ul>
+            <li><a href="envios-pagos.html#envios">Envíos</a></li>
+            <li><a href="envios-pagos.html#pagos">Métodos de pago</a></li>
+            <li><a href="envios-pagos.html#cambios">Cambios y ajustes</a></li>
+            <li><a href="envios-pagos.html#tallas">Guía de tallas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <ul>
+            <li><a href="https://wa.me/5215611673448?text=Hola%20Casa%20Sevilla%2C%20quiero%20informaci%C3%B3n%20de%20sus%20modelos." target="_blank" rel="noopener">WhatsApp +52 1 56 1167 3448</a></li>
+            <li><a href="https://wa.me/c/5215611673448" target="_blank" rel="noopener">Catálogo en WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/casasevilla.mx/" target="_blank" rel="noopener">Instagram @casasevilla.mx</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Casa Sevilla · Atelier Mexica</span>
+        <span>Sitio de demostración — precios y datos de ejemplo.</span>
+      </div>
+    </div>
+  </footer>
+  <a class="wa-float" href="https://wa.me/5215611673448?text=Hola%20Casa%20Sevilla%2C%20quiero%20informaci%C3%B3n%20de%20sus%20modelos." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">WhatsApp</a>
+  <script src="assets/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto — Casa Sevilla (demo)</title>
+  <meta name="description" content="Ficha de producto.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0807">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="demo-banner" role="note">Demo — no es la tienda oficial · Precios y datos de ejemplo</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Casa Sevilla, inicio"><strong>CASA SEVILLA</strong><small>Atelier Mexica</small></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+      <nav id="main-nav" class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="catalogo.html">Colección</a></li>
+          <li><a href="catalogo.html?tipo=botas">Botas</a></li>
+          <li><a href="catalogo.html?tipo=loafers">Loafers</a></li>
+          <li><a href="catalogo.html?tipo=mules">Mules</a></li>
+          <li><a href="catalogo.html?tipo=accesorios">Accesorios</a></li>
+          <li><a href="a-medida.html">A medida</a></li>
+          <li><a href="envios-pagos.html">Envíos y pagos</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/5215611673448?text=Hola%20Casa%20Sevilla%2C%20quiero%20informaci%C3%B3n%20de%20sus%20modelos." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap" data-product>
+      <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a> / <a href="catalogo.html" data-type-link>Colección</a> / <span data-crumb>Modelo</span></nav>
+      <div class="product">
+        <div class="gallery-main"><img data-img src="assets/img/prod-01.jpg" alt="" width="800" height="800"></div>
+        <div>
+          <p class="eyebrow" data-type>Botas</p>
+          <h1 data-name>Modelo</h1>
+          <p class="price" style="font-size:1.3rem"><span data-price>$0 MXN</span><small>PRECIO DE EJEMPLO</small></p>
+          <p data-desc></p>
+          <form id="buy-form" novalidate>
+            <fieldset class="sizes">
+              <legend>Talla MX</legend>
+            <label><input type="radio" name="talla" value="24"><span>24</span></label>
+            <label><input type="radio" name="talla" value="24.5"><span>24.5</span></label>
+            <label><input type="radio" name="talla" value="25"><span>25</span></label>
+            <label><input type="radio" name="talla" value="25.5"><span>25.5</span></label>
+            <label><input type="radio" name="talla" value="26"><span>26</span></label>
+            <label><input type="radio" name="talla" value="26.5"><span>26.5</span></label>
+            <label><input type="radio" name="talla" value="27"><span>27</span></label>
+            <label><input type="radio" name="talla" value="27.5"><span>27.5</span></label>
+            <label><input type="radio" name="talla" value="28"><span>28</span></label>
+            <label><input type="radio" name="talla" value="29"><span>29</span></label>
+            </fieldset>
+            <p class="form-error" id="size-error" role="alert"></p>
+            <p class="notice" style="margin-top:0"><a href="envios-pagos.html#tallas">Guía de tallas</a> · ¿Otra talla? Se hace <a href="a-medida.html">a medida</a>.</p>
+            <button class="btn btn-primary btn-block" type="submit">Pedir por WhatsApp</button>
+          </form>
+          <div class="specs">
+            <details open><summary>Piel</summary><p data-leather></p></details>
+            <details><summary>Suela</summary><p data-sole></p></details>
+            <details><summary>Horma y ajuste</summary><p>Horma de punta almendrada, ajuste regular. Si estás entre dos tallas, te recomendamos la mayor. (Texto de ejemplo.)</p></details>
+            <details><summary>Cuidado</summary><p>Limpia con paño seco, hidrata la piel cada mes y guarda con hormas de madera.</p></details>
+          </div>
+          <ul class="badges">
+            <li>Hecho a mano en el atelier</li>
+            <li>Envío a todo México</li>
+            <li>Personalizable en piel y color</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="section section-alt" aria-labelledby="rel-title">
+      <div class="wrap">
+        <h2 id="rel-title">También te puede gustar</h2>
+        <div class="grid" data-related></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><strong>CASA SEVILLA</strong><small>Atelier Mexica</small></a>
+          <p style="margin-top:1rem">Del pensamiento al objeto.<br>Consultoría en calzado masculino.</p>
+        </div>
+        <div>
+          <h2>Tienda</h2>
+          <ul>
+            <li><a href="catalogo.html">Colección</a></li>
+            <li><a href="catalogo.html?tipo=botas">Botas</a></li>
+            <li><a href="catalogo.html?tipo=loafers">Loafers</a></li>
+            <li><a href="a-medida.html">A medida</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ayuda</h2>
+          <ul>
+            <li><a href="envios-pagos.html#envios">Envíos</a></li>
+            <li><a href="envios-pagos.html#pagos">Métodos de pago</a></li>
+            <li><a href="envios-pagos.html#cambios">Cambios y ajustes</a></li>
+            <li><a href="envios-pagos.html#tallas">Guía de tallas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <ul>
+            <li><a href="https://wa.me/5215611673448?text=Hola%20Casa%20Sevilla%2C%20quiero%20informaci%C3%B3n%20de%20sus%20modelos." target="_blank" rel="noopener">WhatsApp +52 1 56 1167 3448</a></li>
+            <li><a href="https://wa.me/c/5215611673448" target="_blank" rel="noopener">Catálogo en WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/casasevilla.mx/" target="_blank" rel="noopener">Instagram @casasevilla.mx</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Casa Sevilla · Atelier Mexica</span>
+        <span>Sitio de demostración — precios y datos de ejemplo.</span>
+      </div>
+    </div>
+  </footer>
+  <a class="wa-float" href="https://wa.me/5215611673448?text=Hola%20Casa%20Sevilla%2C%20quiero%20informaci%C3%B3n%20de%20sus%20modelos." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">WhatsApp</a>
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
