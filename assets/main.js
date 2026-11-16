@@ -41,20 +41,34 @@
 
   function cardHTML(p) {
     return '<a class="card" href="producto.html?id=' + p.id + '">' +
-      '<div class="thumb"><img src="assets/img/' + p.img + '" alt="' + esc(p.name) + '" loading="lazy" width="800" height="800">' +
+      '<div class="thumb"><img src="assets/img/' + p.img + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async" width="800" height="800">' +
       '<span class="tag">' + esc(p.collection) + '</span></div>' +
       '<h3>' + esc(p.name) + '</h3><p class="meta">' + esc(p.leather) + '</p>' +
       '<p class="price">' + fmt(p.price) + '<small>DEMO</small></p></a>';
   }
 
-  // Menú móvil
+  // Menú móvil (se queda bajo el header adhesivo; Escape y clic afuera lo cierran)
   var toggle = document.querySelector(".menu-toggle");
   var nav = document.getElementById("main-nav");
   if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("open");
+    var setOpen = function (open) {
+      nav.classList.toggle("open", open);
       toggle.setAttribute("aria-expanded", String(open));
       toggle.textContent = open ? "Cerrar" : "Menú";
+    };
+    toggle.addEventListener("click", function () {
+      setOpen(!nav.classList.contains("open"));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("open")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener("pointerdown", function (e) {
+      if (!nav.classList.contains("open")) return;
+      if (nav.contains(e.target) || toggle.contains(e.target)) return;
+      setOpen(false);
     });
   }
 
